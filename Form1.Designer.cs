@@ -130,11 +130,12 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(593, 339);
+            this.label4.Location = new System.Drawing.Point(597, 339);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 13);
+            this.label4.Size = new System.Drawing.Size(191, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "(C) 23.04.2019 Immanuel von Neumann";
+            this.label4.Text = "© 23.04.2019 Immanuel von Neumann";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label5
             // 
@@ -153,6 +154,7 @@
             this.console.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.console.Location = new System.Drawing.Point(50, 238);
             this.console.Name = "console";
+            this.console.ReadOnly = true;
             this.console.Size = new System.Drawing.Size(700, 96);
             this.console.TabIndex = 12;
             this.console.Text = "";

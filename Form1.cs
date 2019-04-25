@@ -70,7 +70,7 @@ namespace Mic_Volume_Fix {
                 throw new Exception("ERROR: Filepath does not lead to the directory \"Steam\"");
             }
             String volume = scalar.Value.ToString();
-            if (!(scalar.Value == 1)) {
+            if (!(scalar.Value == 100)) {
                 volume = "0." + scalar.Value;
             }
             String dir = folder.Text + "\\userdata";
