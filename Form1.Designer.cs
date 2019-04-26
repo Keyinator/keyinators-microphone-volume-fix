@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.scalar = new System.Windows.Forms.HScrollBar();
             this.volume = new System.Windows.Forms.TextBox();
+            this.check = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // folderBrowserDialog1
@@ -142,7 +143,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(277, 173);
+            this.label5.Location = new System.Drawing.Point(277, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(246, 13);
             this.label5.TabIndex = 8;
@@ -163,7 +164,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(358, 189);
+            this.button1.Location = new System.Drawing.Point(358, 207);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 11;
@@ -174,6 +175,7 @@
             // scalar
             // 
             this.scalar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.scalar.Enabled = false;
             this.scalar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.scalar.LargeChange = 1;
             this.scalar.Location = new System.Drawing.Point(399, 143);
@@ -187,6 +189,7 @@
             this.volume.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.volume.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.volume.Enabled = false;
             this.volume.Location = new System.Drawing.Point(367, 143);
             this.volume.Name = "volume";
             this.volume.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -196,12 +199,26 @@
             this.volume.TextChanged += new System.EventHandler(this.volume_TextChanged);
             this.volume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.volume_KeyPress);
             // 
+            // check
+            // 
+            this.check.AutoSize = true;
+            this.check.Checked = true;
+            this.check.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.check.Location = new System.Drawing.Point(330, 162);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(152, 17);
+            this.check.TabIndex = 13;
+            this.check.Text = "Always use current volume";
+            this.check.UseVisualStyleBackColor = true;
+            this.check.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 361);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.percent);
             this.Controls.Add(this.volume);
             this.Controls.Add(this.console);
@@ -242,6 +259,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.HScrollBar scalar;
         private System.Windows.Forms.TextBox volume;
+        private System.Windows.Forms.CheckBox check;
     }
 }
 

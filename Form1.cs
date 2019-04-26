@@ -73,6 +73,9 @@ namespace Mic_Volume_Fix {
             if (!(scalar.Value == 100)) {
                 volume = "0." + scalar.Value;
             }
+            if (check.Checked == true) {
+                volume = "-1";
+            }
             String dir = folder.Text + "\\userdata";
             string[] subdirectoryEntries = Directory.GetDirectories(dir);
             foreach (string subdirectory in subdirectoryEntries) {
@@ -110,6 +113,21 @@ namespace Mic_Volume_Fix {
                   //  volume.Text = string.Empty;
                 //else
                     scalar.Value = int.Parse(volume.Text);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) {
+            switch (check.Checked) {
+                case true:
+                    scalar.Enabled = false;
+                    volume.Enabled = false;
+                    break;
+                case false:
+                    scalar.Enabled = true;
+                    volume.Enabled = true;
+                    break;
+                default:
+                    break;
             }
         }
     }
