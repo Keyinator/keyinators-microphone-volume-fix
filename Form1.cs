@@ -74,7 +74,6 @@ namespace Mic_Volume_Fix {
             if (check.Checked == true) {
                 volume = "-1";
             }
-            console.AppendText("VOLUME: " + volume + "|");
             String dir = folder.Text + "\\userdata";
             string[] subdirectoryEntries = Directory.GetDirectories(dir);
             foreach (string subdirectory in subdirectoryEntries) {
