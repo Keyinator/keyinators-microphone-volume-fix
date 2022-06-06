@@ -69,11 +69,8 @@ namespace Mic_Volume_Fix {
             if (folder.Text.Split(Path.DirectorySeparatorChar).Last() != "Steam") {
                 throw new Exception("ERROR: Filepath does not lead to the directory \"Steam\"");
             }
-            decimal per = (decimal)scalar.Value / 100;
-            String volume = per.ToString();
-            if (check.Checked == true) {
-                volume = "-1";
-            }
+            String volume = check.Checked ? "-1" : String.ValueOf((decimal)scalar.Value / 100);
+            
             String dir = folder.Text + "\\userdata";
             string[] subdirectoryEntries = Directory.GetDirectories(dir);
             foreach (string subdirectory in subdirectoryEntries) {
